@@ -1,0 +1,682 @@
+*{
+
+
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto Slab', serif;
+
+
+
+}
+
+body, html{
+
+	height: 100%;
+	width: device-width;
+	overflow: hidden;
+	
+}
+
+#turnIt{
+
+
+	display: none;
+
+}
+
+#hiddenMenu{
+
+
+	display: none;
+}
+
+#hireMe p{
+
+
+	padding: 5px;
+	border: 2px solid black;
+	width: 100px;
+	text-align: center;
+	justify-self: center;
+	align-self: center;
+	
+
+}
+
+#hireMe{
+
+	grid-area: hireMen;
+	position: absolute;
+	right: -1%;
+	top: -25%;
+}
+
+
+#Wrapper{
+	max-height: 100% !important;
+	position: relative;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	-moz-transition: -moz-transform 1s ease-in-out;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 10fr 1fr;
+	grid-template-columns: 150px 120px 7fr 1fr;
+	grid-template-areas: "header header header header"
+	". siderNav mainContent . "
+	". . . . ";
+	overflow: hidden;
+	
+}
+
+#header{
+
+	grid-area: header;
+	background-color: rgba(0,0,0,1);
+	display: grid;
+	grid-template-columns: 15fr 1fr;
+	grid-template-areas: ". corner";
+	min-height: 50px;
+	position: relative;
+}
+
+
+
+#cornerNav{
+
+	grid-area: corner;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+
+}
+
+
+#cornerNav span{
+
+	margin: 3px 0;
+	position: relative;
+	background-color: white;
+	height: 1px;
+	width: 20px;
+
+
+}
+
+#cornerNav::before{
+
+	position: relative;
+	background-color: white;
+	justify-self: center;
+	content: "";
+	height: 1px;
+	width: 13px;
+	background-color: white;
+
+}
+
+#cornerNav::after{
+
+	position: relative;
+	background-color: white;
+	justify-self: center;
+	content: "";
+	height: 1px;
+	width: 13px;
+	background-color: white;
+
+}
+
+
+.chosen{
+
+	text-decoration: line-through;
+	color: black !important;
+
+	
+}
+
+
+
+#siderNav{
+
+	display: grid;
+	position: relative;
+	
+
+}
+#siderNavMenu {
+
+
+	top: 10%;
+	position: absolute;
+	white-space: nowrap;
+	list-style: disc;
+	left: 34.5%;
+	line-height: 12em;
+	color: white;
+	font-size: 0.7em;
+	
+
+}
+#siderNavMenu ul{
+
+	list-style-position: inside;
+}
+
+#siderNavMenu span{
+
+	left: 20%;
+	color: black;
+	font-size: 20px;
+
+}
+
+.skills{
+
+	width: 70px;
+	height: 70px;
+}
+#siderNav::before{
+
+	top: 15%;
+	position: absolute;
+	content: "";
+	height: 22em;
+	width: 2px;
+	background-color: black;
+	left: 35%;
+}
+
+#siderNavMenu .one.chosen::before{
+
+	position: absolute;
+	content: "01";
+	left: -40%;
+	color: black;
+	max-height: 35px;
+}
+
+#siderNavMenu .two.chosen::before{
+
+	position: absolute;
+	content: "02";
+	left: -40%;
+	color: black;
+	max-height: 35px;
+}
+
+#siderNavMenu .three.chosen::before{
+
+	position: absolute;
+	content: "03";
+	left: -40%;
+	color: black;
+	max-height: 35px;
+}
+
+#hiddenMenu span{
+
+
+	font-size: 50px;
+
+}
+
+#hiddenMenu{
+
+	text-align: center;
+}
+
+#mainContent1{
+
+	grid-area: mainContent;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 8fr 1fr;
+	text-align: left;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	grid-template-areas: "thePic headerOne"
+	"hireMen .";
+} 
+
+#mainContent2{
+
+	
+	grid-area: menutwooo;
+	grid-area: mainContent;
+	display: none;
+	grid-template-columns: 1fr 8fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-template-areas: 
+	
+	" . twoHead . "
+	" . imgMe . "
+	". skillset .";
+	
+
+
+	
+}
+
+.skillImg.onee{
+
+grid-area: imgOne;
+
+
+}
+
+.skillImg.twoo{
+
+grid-area: imgTwo;
+
+}
+
+.skillImg.threee{
+
+grid-area: imgThree;
+
+}
+
+.skillImg.fourr{
+
+grid-area: imgFour;
+
+
+}
+
+.skillImg{
+
+	width: 50px !important;
+	height: 50px !important;
+	align-self: center;
+	justify-self: center;
+
+}
+
+#classDiv{
+
+
+	grid-area: skillset;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+	grid-template-areas: ". imgOne imgTwo imgThree imgFour ."; 
+	grid-column-gap: 3em;
+	justify-content: center;
+	justify-self: center;
+	
+
+	
+
+}
+
+#mainContent2 h1{
+
+		grid-area: twoHead;
+		justify-self: center;
+		text-align: center;
+		align-self: center;
+
+	
+
+}
+
+#me{
+
+	grid-area: imgMe;	
+	justify-self: center;
+	align-self: center;
+	
+}
+
+#me img{
+
+	border-radius: 50%;
+	border: 5px solid black;
+	max-width: 200px;
+	max-height: 200px;
+	height: 80%;
+	min-width: 80px;
+	min-height: 80px;
+	width: auto; 
+
+}
+
+#mainContent3{
+
+	grid-area: menuthreee;
+	grid-area: mainContent;
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: " myself myself "
+	" myself myself";
+	align-content: center;
+	justify-content: center;
+}
+
+#mainContent3 ul{
+
+	line-height: 2em;
+	font-size: 1.5em;
+	text-decoration: none;
+	grid-area: myself;
+	justify-self: center;
+	align-self: center;
+
+
+}
+
+a{
+
+	text-decoration: none;
+	color: black;
+}
+
+#mainContent3 ul div{
+
+	text-align: center;
+
+	
+
+}
+
+#mainContent1 h1{
+grid-area: headerOne;
+position: relative;
+align-self: center;
+font-size: 55px;
+left: 8%;
+
+}
+
+.wrapperFarView{
+
+	overflow: hidden;
+	font-size: 0.5 !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	position: relative;
+	outline-style: solid;
+    outline-color: black;
+    outline-width: 5px;
+
+	transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+	
+
+}
+
+#hiddenMenu ul li{
+
+
+
+	list-style: none;
+	color: black !important;
+}
+
+.borderBackUp{
+
+	outline-style: solid;
+    outline-color: black;
+    outline-width: 5px;
+	-webkit-transition: border 1s ease-in-out;
+	-moz-transition: border 1s ease-in-out;
+}
+
+
+
+#mainContent1 h1::before{
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 95%;
+	background-color: black;
+	left: -8%;
+	top: 2.5%;
+}	
+
+#thePicture{
+	grid-area: thePic;
+	height: 250px;
+	width: auto;
+	justify-self: flex-end;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) and (orientation: portrait){
+
+
+
+	#siderNav::before{
+
+	height: 30em;
+	}	
+
+	#siderNavMenu{
+
+
+		line-height: 17em;
+	} 
+
+	#hiddenMenu ul li{
+
+	
+
+		font-size: 10em !important;
+		left: 10%;
+	}
+
+	
+
+	#hiddenMenu ul{
+
+		line-height: 8em;
+
+	}
+}
+
+@media only screen and (max-width: 600px){
+
+#siderNav, #siderNavMenu, #siderNavMenu::before{
+
+	display: none !important;
+}
+
+#hiddenMenu{
+
+	right: 0;
+}
+
+#hiddenMenu span{
+
+	
+	font-size: 1.5em;
+
+}
+
+#hiddenMenu ul{
+
+	
+	line-height: 15vh;
+
+}
+
+#thePicture{
+
+
+		height: 200px;
+
+	}
+
+	#mainContent1 h1{
+
+		font-size: 40px;
+
+	}
+
+	#classDiv{
+
+
+		grid-column-gap: 15px;
+	}
+
+
+}
+
+
+
+
+@media only screen and (orientation:landscape) and  (max-height: 400px) {
+
+	
+	#hiddenMenu{
+
+		
+		line-height: 15vh !important;
+		left: 50%;
+	}
+
+
+	#hiddenMenu span{
+
+		font-size: 30px;
+	}
+
+
+	#thePicture{
+
+
+		height: 200px;
+
+	}
+
+	#mainContent1 h1 {
+
+		font-size: 35px !important;
+
+	}
+	
+	#mainContent2 h1{
+
+
+		font-size: 30px !important;
+	}
+
+
+	
+
+	#siderNav::before{
+
+		
+		height: 15em !important;
+
+
+	}
+
+	#siderNavMenu{
+
+
+
+		line-height: 8em;
+	}
+
+	h1{
+
+		font-size: 4em !important;
+
+	}
+
+	#hireMe{
+
+		left: 10%;
+
+		}
+
+	#me{
+
+		height: 150px;
+		align-self: center;
+		width: auto;
+
+	}
+
+	
+
+	#classDiv{
+
+		align-self: flex-end;
+		grid-column-gap: 30px !important;
+
+	}
+
+	.skillImg{
+
+		max-height: 45px;
+		width: auto;
+
+
+
+	}
+
+
+   }
+
+@media only screen and (min-width: 2500px) {
+	   
+		#hireMe p{
+
+
+		padding: 10px;
+		border: 2px solid black;
+		width: 200px;
+		font-size: 25px;
+		
+		
+			
+
+		}
+
+		#hireMe{
+
+		top: -100%;
+
+		}
+
+		   #siderNavMenu {
+
+
+			top: 25%;
+			left: 44.5%;
+			line-height: 24em;
+			
+			
+
+			}
+			span{
+
+				
+				font-size: 30px;
+
+			}
+
+			#siderNav::before{
+
+				top: 30%;
+				height: 45em;
+				
+			}
+			   #thePicture{
+				
+				height: 450px;
+				
+			}
+
+
+			#mainContent1 h1{
+
+			font-size: 90px;
+
+			}
+
+
+	}
